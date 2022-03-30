@@ -499,7 +499,7 @@ window.addEventListener('DOMContentLoaded', () =>{
     function getStaticIncformation (selector, activeClass) {
         const elements = document.querySelectorAll(selector);
 
-        elements.forEach(elem => 
+        elements.forEach(elem => {
             elem.addEventListener('click', (e) => {
             if (e.target.getAttribute('data-ratio')) {
                ratio = +e.target.getAttribute('data-ratio');
@@ -517,7 +517,7 @@ window.addEventListener('DOMContentLoaded', () =>{
 
             calcTotal();
         });
-    });
+        });
     }
 
     getStaticIncformation('#gender div','calculating__choose-item_active' );
